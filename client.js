@@ -51,6 +51,7 @@ socket.on('receive', (data) => {
         messageContainer.appendChild(messageText);
 
         mesContainer.appendChild(messageContainer);
+        audio.play();
     }
 });
 
@@ -58,5 +59,5 @@ socket.on('leave', (data) => {
     append(`${data} left the chat`, 'msgcenter');
 });
 
-// Display your own name in the chat window
+// Display name in the chat window
 append(`Your name: ${name}`, 'userjoined');
